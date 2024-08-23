@@ -1,7 +1,7 @@
 version: '3'
 services:
   xxl_job_db:
-    image: mysql/mysql-server:8.0.31
+    image: registry.cn-hangzhou.aliyuncs.com/dockerhub_mirror/mysql-server:8.0.32
     restart: always
     container_name: xxl_job_db
     ports:
@@ -13,7 +13,7 @@ services:
       MYSQL_ROOT_PASSWORD: root_pwd
 
   xxl-job-admin:
-    image: xuxueli/xxl-job-admin:2.4.0
+    image: registry.cn-hangzhou.aliyuncs.com/dockerhub_mirror/xxl-job-admin:2.4.1
     restart: always
     ports:
       - 38080:8080
